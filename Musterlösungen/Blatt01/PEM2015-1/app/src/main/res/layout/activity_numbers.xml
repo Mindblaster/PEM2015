@@ -1,0 +1,54 @@
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/startFeedback"
+        android:id="@+id/feedback"
+        android:layout_gravity="center_vertical"
+        android:textAlignment="center"
+        android:textSize="24sp"
+
+        android:layout_below="@+id/input"
+        android:layout_alignParentRight="true" />
+
+    <EditText
+        android:layout_width="359dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/input"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Guess"
+        android:id="@+id/guessButton"
+        android:layout_above="@+id/restartButton"
+        android:layout_centerHorizontal="true"
+        android:onClick="guessNumber"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/restart"
+        android:id="@+id/restartButton"
+        android:layout_alignParentBottom="true"
+        android:onClick="restartGame"/>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="128dp"
+        android:id="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/feedback"
+        android:src="@drawable/zahlenraten"/>
+
+</RelativeLayout>
